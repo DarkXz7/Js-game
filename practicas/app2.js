@@ -1,15 +1,10 @@
+function promedio (){
+    let numero1 = parseFloat(document.getElementById("numero1").value);
+    let numero2 = parseFloat(document.getElementById("numero2").value);
+    let numero3 = parseFloat(document.getElementById("numero3").value);
+    let promedioNumeros = (numero1 + numero2 + numero3) / 3;
+    promedioNumeros = promedioNumeros.toFixed(0); // Round to two decimal places
+    document.getElementById("promedio").innerText = promedioNumeros; 
 
-
-
-
-//Crea una función que calcule el índice de masa corporal (IMC) de una persona a partir de su altura en metros y peso en kilogramos, que se recibirán como parámetros.
-
-
-function calcular(){
-    
-    let altura = parseFloat(document.getElementById("altura").value);
-    let peso = parseFloat(document.getElementById("peso").value);
-    let imc = peso/altura;
-    document.getElementById("imc").innerHTML ='Su imc es: '+ imc.toFixed(2);
+    console.log(numero1, numero2, numero3); 
 }
-
