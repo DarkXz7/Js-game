@@ -4,7 +4,7 @@ function promedio (){
     let numero3 = parseFloat(document.getElementById("numero3").value);
     let promedioNumeros = (numero1 + numero2 + numero3) / 3;
     promedioNumeros = promedioNumeros.toFixed(0); // Round to two decimal places
-    document.getElementById("promedio").innerText = promedioNumeros; // Set the inner text of the <p> element
+    document.getElementById("promedio").innerText = promedioNumeros; 
 
-    console.log(numero1, numero2, numero3); // Verify values
+    console.log(numero1, numero2, numero3); 
 }
