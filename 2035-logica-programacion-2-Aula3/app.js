@@ -47,10 +47,12 @@ function condicionesIniciales() {
 function reiniciarJuego() {
     //limpiar caja
     limpiarCaja();
+
     //Indicar mensaje de intervalo de números 
     //Generar el número aleatorio
     //Inicializar el número intentos
     condicionesIniciales();
+    
     //Deshabilitar el botón de nuevo juego
     document.querySelector('#reiniciar').setAttribute('disabled','true');
     
