@@ -1,6 +1,6 @@
+let listaNumerosSorteados = [];
 let numeroSecreto = generarNumeroSecreto();
 let intentos = 0;
-
 
 function asignarTextoElemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
@@ -32,8 +32,25 @@ function limpiarCaja() {
 }
 
 function generarNumeroSecreto() {
-    return Math.floor(Math.random()*10)+1;
+    
+    let numeroGenerado = Math.floor(Math.random()*10)+1;
+    
 
+    /*-  En la primera ronda se genera un número (por ejemplo, 5). 
+    - En la segunda ejecución, si se genera el mismo número (5), 
+    - el condicional verifica si ya existe en la lista de listaNumerosSorteados. 
+    - Si es así, se genera otro número; si no, se agrega a la lista. */
+    console.log(numeroGenerado);
+    console.log(listaNumerosSorteados);
+    
+    //  (si listaNumerosGenerados INCLUYE numeroGenerado)
+    if (listaNumerosSorteados.includes(numeroGenerado)) {
+        return generarNumeroSecreto();
+    } else {
+        listaNumerosSorteados.push(numeroGenerado);
+        return numeroGenerado;
+    }
+    
 }
 
 function condicionesIniciales() {
